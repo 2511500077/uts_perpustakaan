@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 # UTS Database Client-Server — API Perpustakaan
 
 ## Tema
@@ -109,4 +111,8 @@ Untuk POST dan PUT, pilih Body → JSON.
 - Pastikan tes 400, 404, 409, 405 serta uji injeksi `?id=1' OR 1=1 --` gagal membocorkan data.
 - Export seluruh request Thunder Client sebagai collection JSON setelah menambahkan semua kasus sukses dan gagal.
 - Isi nama/NIM/tugas anggota kelompok, tautan repo GitHub publik, dan tautan rekaman Zoom.
-- Project ini adalah starter yang disusun untuk spesifikasi tugas; verifikasi di lingkungan Laragon sebelum dikumpulkan.
+- # Project ini adalah starter yang disusun untuk spesifikasi tugas; verifikasi di lingkungan Laragon sebelum dikumpulkan.
+
+# uts_perpustakaan
+
+> > > > > > > 527147acf1fb7cf6f3218f52372c47aca8fd8c44
