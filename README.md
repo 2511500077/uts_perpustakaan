@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 # UTS Database Client-Server — API Perpustakaan
@@ -12,6 +14,7 @@ API Perpustakaan sederhana menggunakan PHP Native, MySQL, dan `mysqli` prepared 
 Lengkapi sebelum dikumpulkan:
 
 =======
+>>>>>>> b446c545c5af28bb491ef37556449fbf114972bb
 # UTS Database Client-Server — API Perpustakaan
 
 ## Tema
@@ -19,7 +22,10 @@ API Perpustakaan sederhana menggunakan PHP Native, MySQL, dan `mysqli` prepared 
 
 ## Anggota kelompok
 Lengkapi sebelum dikumpulkan:
+<<<<<<< HEAD
+=======
 >>>>>>> 2d3c7bb (nyambungin repo ke vscode)
+>>>>>>> b446c545c5af28bb491ef37556449fbf114972bb
 - Anggota 1 — NIM: ..., Nama: ..., Tugas: database/ERD
 - Anggota 2 — NIM: ..., Nama: ..., Tugas: endpoint anggota
 - Anggota 3 — NIM: ..., Nama: ..., Tugas: endpoint buku
@@ -27,9 +33,12 @@ Lengkapi sebelum dikumpulkan:
 
 ## Struktur
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2d3c7bb (nyambungin repo ke vscode)
+>>>>>>> b446c545c5af28bb491ef37556449fbf114972bb
 - `api/anggota.php` — CRUD anggota
 - `api/buku.php` — CRUD buku
 - `api/peminjaman.php` — CRUD peminjaman; GET menggunakan JOIN untuk nama anggota dan judul buku
@@ -42,9 +51,12 @@ Lengkapi sebelum dikumpulkan:
 
 ## ERD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2d3c7bb (nyambungin repo ke vscode)
+>>>>>>> b446c545c5af28bb491ef37556449fbf114972bb
 ```mermaid
 erDiagram
     ANGGOTA ||--o{ PEMINJAMAN : melakukan
@@ -76,9 +88,12 @@ erDiagram
 
 ## Cara menjalankan di Laragon
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2d3c7bb (nyambungin repo ke vscode)
+>>>>>>> b446c545c5af28bb491ef37556449fbf114972bb
 1. Ekstrak folder `uts-perpustakaan` ke `C:\\laragon\\www\\uts-perpustakaan`.
 2. Jalankan Laragon, aktifkan Apache dan MySQL.
 3. Buka phpMyAdmin, import `database/schema.sql`. Script membuat database `uts_perpustakaan`.
@@ -89,6 +104,8 @@ erDiagram
    - `http://localhost/uts-perpustakaan/api/peminjaman.php`
 
 ## Kontrak endpoint
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 Semua respons berbentuk `{ "status": "...", "message": "...", "data": ... }`.
@@ -118,6 +135,7 @@ Untuk POST dan PUT, pilih Body → JSON.
 ## Status yang diharapkan
 
 =======
+>>>>>>> b446c545c5af28bb491ef37556449fbf114972bb
 Semua respons berbentuk `{ "status": "...", "message": "...", "data": ... }`.
 Untuk POST dan PUT, pilih Body → JSON.
 
@@ -143,7 +161,10 @@ Untuk POST dan PUT, pilih Body → JSON.
 | Peminjaman | DELETE | `/api/peminjaman.php?id=5` | — |
 
 ## Status yang diharapkan
+<<<<<<< HEAD
+=======
 >>>>>>> 2d3c7bb (nyambungin repo ke vscode)
+>>>>>>> b446c545c5af28bb491ef37556449fbf114972bb
 - `200`: GET sukses, PUT sukses, DELETE sukses
 - `201`: POST sukses
 - `400`: parameter/body/field tidak valid
@@ -154,13 +175,19 @@ Untuk POST dan PUT, pilih Body → JSON.
 
 ## Catatan pengujian sebelum dikumpulkan
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2d3c7bb (nyambungin repo ke vscode)
+>>>>>>> b446c545c5af28bb491ef37556449fbf114972bb
 - Jalankan seluruh request di Thunder Client dan simpan screenshot hasil nyata ke `screenshot/`.
 - Pastikan tes 400, 404, 409, 405 serta uji injeksi `?id=1' OR 1=1 --` gagal membocorkan data.
 - Export seluruh request Thunder Client sebagai collection JSON setelah menambahkan semua kasus sukses dan gagal.
 - Isi nama/NIM/tugas anggota kelompok, tautan repo GitHub publik, dan tautan rekaman Zoom.
+<<<<<<< HEAD
+- Project ini adalah starter yang disusun untuk spesifikasi tugas; verifikasi di lingkungan Laragon sebelum dikumpulkan.
+=======
 <<<<<<< HEAD
 - # Project ini adalah starter yang disusun untuk spesifikasi tugas; verifikasi di lingkungan Laragon sebelum dikumpulkan.
 
@@ -171,3 +198,4 @@ Untuk POST dan PUT, pilih Body → JSON.
 - Project ini adalah starter yang disusun untuk spesifikasi tugas; verifikasi di lingkungan Laragon sebelum dikumpulkan.
 >>>>>>> 2d3c7bb (nyambungin repo ke vscode)
 .
+>>>>>>> b446c545c5af28bb491ef37556449fbf114972bb
