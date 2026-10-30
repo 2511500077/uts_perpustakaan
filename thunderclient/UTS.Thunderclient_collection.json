@@ -1,0 +1,395 @@
+{
+  "client": "Thunder Client",
+  "version": "1.2",
+  "name": "UTS Perpustakaan API",
+  "collectionId": "col_uts_perpustakaan",
+  "dateExported": "2026-10-30T00:00:00.000Z",
+  "folders": [],
+  "requests": [
+    {
+      "_id": "req_001",
+      "colId": "col_uts_perpustakaan",
+      "name": "GET anggota - all",
+      "url": "http://localhost/uts-perpustakaan/api/anggota.php",
+      "method": "GET",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_002",
+      "colId": "col_uts_perpustakaan",
+      "name": "GET anggota - detail id 1",
+      "url": "http://localhost/uts-perpustakaan/api/anggota.php?id=1",
+      "method": "GET",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_003",
+      "colId": "col_uts_perpustakaan",
+      "name": "GET anggota - search pagination",
+      "url": "http://localhost/uts-perpustakaan/api/anggota.php?search=a&page=1&limit=5",
+      "method": "GET",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_004",
+      "colId": "col_uts_perpustakaan",
+      "name": "GET buku - all",
+      "url": "http://localhost/uts-perpustakaan/api/buku.php",
+      "method": "GET",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_005",
+      "colId": "col_uts_perpustakaan",
+      "name": "GET buku - detail id 1",
+      "url": "http://localhost/uts-perpustakaan/api/buku.php?id=1",
+      "method": "GET",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_006",
+      "colId": "col_uts_perpustakaan",
+      "name": "GET buku - search pagination",
+      "url": "http://localhost/uts-perpustakaan/api/buku.php?search=a&page=1&limit=5",
+      "method": "GET",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_007",
+      "colId": "col_uts_perpustakaan",
+      "name": "GET peminjaman - all",
+      "url": "http://localhost/uts-perpustakaan/api/peminjaman.php",
+      "method": "GET",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_008",
+      "colId": "col_uts_perpustakaan",
+      "name": "GET peminjaman - detail id 1",
+      "url": "http://localhost/uts-perpustakaan/api/peminjaman.php?id=1",
+      "method": "GET",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_009",
+      "colId": "col_uts_perpustakaan",
+      "name": "GET peminjaman - search pagination",
+      "url": "http://localhost/uts-perpustakaan/api/peminjaman.php?search=a&page=1&limit=5",
+      "method": "GET",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_010",
+      "colId": "col_uts_perpustakaan",
+      "name": "POST anggota - success",
+      "url": "http://localhost/uts-perpustakaan/api/anggota.php",
+      "method": "POST",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\"no_anggota\": \"AGT-2026-006\", \"nama\": \"Dewi Lestari\", \"email\": \"dewi.lestari@example.com\", \"telepon\": \"081234560006\"}"
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_011",
+      "colId": "col_uts_perpustakaan",
+      "name": "POST anggota - duplicate 409",
+      "url": "http://localhost/uts-perpustakaan/api/anggota.php",
+      "method": "POST",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\"no_anggota\": \"AGT-2026-001\", \"nama\": \"Nama Duplikat\", \"email\": \"duplikat@example.com\", \"telepon\": \"081234560099\"}"
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_012",
+      "colId": "col_uts_perpustakaan",
+      "name": "POST anggota - invalid 400",
+      "url": "http://localhost/uts-perpustakaan/api/anggota.php",
+      "method": "POST",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\"no_anggota\": \"\", \"nama\": \"Nama Tidak Lengkap\", \"email\": \"bukan-email\", \"telepon\": \"0812\"}"
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_013",
+      "colId": "col_uts_perpustakaan",
+      "name": "PUT anggota - success",
+      "url": "http://localhost/uts-perpustakaan/api/anggota.php?id=1",
+      "method": "PUT",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\"no_anggota\": \"AGT-2026-001\", \"nama\": \"Andi Pratama Updated\", \"email\": \"andi.pratama@example.com\", \"telepon\": \"081234560001\"}"
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_014",
+      "colId": "col_uts_perpustakaan",
+      "name": "DELETE anggota - missing 404",
+      "url": "http://localhost/uts-perpustakaan/api/anggota.php?id=99999",
+      "method": "DELETE",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_015",
+      "colId": "col_uts_perpustakaan",
+      "name": "POST buku - success",
+      "url": "http://localhost/uts-perpustakaan/api/buku.php",
+      "method": "POST",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\"kode_buku\": \"BK-006\", \"judul\": \"Atomic Habits\", \"pengarang\": \"James Clear\", \"tahun_terbit\": 2018, \"stok\": 5}"
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_016",
+      "colId": "col_uts_perpustakaan",
+      "name": "POST buku - duplicate 409",
+      "url": "http://localhost/uts-perpustakaan/api/buku.php",
+      "method": "POST",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\"kode_buku\": \"BK-001\", \"judul\": \"Buku Duplikat\", \"pengarang\": \"Penulis\", \"tahun_terbit\": 2020, \"stok\": 2}"
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_017",
+      "colId": "col_uts_perpustakaan",
+      "name": "POST buku - invalid 400",
+      "url": "http://localhost/uts-perpustakaan/api/buku.php",
+      "method": "POST",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\"kode_buku\": \"\", \"judul\": \"Judul\", \"pengarang\": \"Penulis\", \"tahun_terbit\": 2018, \"stok\": -1}"
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_018",
+      "colId": "col_uts_perpustakaan",
+      "name": "PUT buku - success",
+      "url": "http://localhost/uts-perpustakaan/api/buku.php?id=1",
+      "method": "PUT",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\"kode_buku\": \"BK-001\", \"judul\": \"Laskar Pelangi\", \"pengarang\": \"Andrea Hirata\", \"tahun_terbit\": 2005, \"stok\": 8}"
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_019",
+      "colId": "col_uts_perpustakaan",
+      "name": "DELETE buku - missing 404",
+      "url": "http://localhost/uts-perpustakaan/api/buku.php?id=99999",
+      "method": "DELETE",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_020",
+      "colId": "col_uts_perpustakaan",
+      "name": "POST peminjaman - success",
+      "url": "http://localhost/uts-perpustakaan/api/peminjaman.php",
+      "method": "POST",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\"anggota_id\": 1, \"buku_id\": 2, \"tanggal_pinjam\": \"2026-10-30\", \"tanggal_kembali\": null, \"status\": \"dipinjam\"}"
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_021",
+      "colId": "col_uts_perpustakaan",
+      "name": "POST peminjaman - FK missing 404",
+      "url": "http://localhost/uts-perpustakaan/api/peminjaman.php",
+      "method": "POST",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\"anggota_id\": 99999, \"buku_id\": 2, \"tanggal_pinjam\": \"2026-10-30\", \"tanggal_kembali\": null, \"status\": \"dipinjam\"}"
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_022",
+      "colId": "col_uts_perpustakaan",
+      "name": "POST peminjaman - invalid 400",
+      "url": "http://localhost/uts-perpustakaan/api/peminjaman.php",
+      "method": "POST",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\"anggota_id\": \"x\", \"buku_id\": 2, \"tanggal_pinjam\": \"tanggal-salah\", \"status\": \"aneh\"}"
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_023",
+      "colId": "col_uts_perpustakaan",
+      "name": "PUT peminjaman - success",
+      "url": "http://localhost/uts-perpustakaan/api/peminjaman.php?id=1",
+      "method": "PUT",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\"anggota_id\": 1, \"buku_id\": 1, \"tanggal_pinjam\": \"2026-10-01\", \"tanggal_kembali\": \"2026-10-08\", \"status\": \"dikembalikan\"}"
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_024",
+      "colId": "col_uts_perpustakaan",
+      "name": "DELETE peminjaman - missing 404",
+      "url": "http://localhost/uts-perpustakaan/api/peminjaman.php?id=99999",
+      "method": "DELETE",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "_id": "req_025",
+      "colId": "col_uts_perpustakaan",
+      "name": "GET injection attempt",
+      "url": "http://localhost/uts-perpustakaan/api/anggota.php?id=1%27%20OR%201%3D1%20--%20",
+      "method": "GET",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    }
+  ]
+}
