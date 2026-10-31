@@ -11,7 +11,10 @@ API Perpustakaan sederhana menggunakan PHP Native, MySQL, dan `mysqli` prepared 
 
 ## Anggota kelompok
 
-Lengkapi sebelum dikumpulkan:
+Panji (2511500074)
+Afdal (2511500076)
+Julio Putrawan (2511500076)
+Ade Putra (2511500078)
 
 =======
 >>>>>>> b446c545c5af28bb491ef37556449fbf114972bb
@@ -57,7 +60,7 @@ Lengkapi sebelum dikumpulkan:
 =======
 >>>>>>> 2d3c7bb (nyambungin repo ke vscode)
 >>>>>>> b446c545c5af28bb491ef37556449fbf114972bb
-```mermaid
+mermaid
 erDiagram
     ANGGOTA ||--o{ PEMINJAMAN : melakukan
     BUKU ||--o{ PEMINJAMAN : dipinjam
