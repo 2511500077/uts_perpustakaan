@@ -57,4 +57,18 @@ try {
         $stmt->bind_param('iisssi',$aid,$bid,$data['tanggal_pinjam'],$kembali,$status,$id); $stmt->execute();
         jsonResponse(200,'success','Peminjaman berhasil diperbarui',['id'=>$id]);
     }
+    if ($method === 'DELETE') {
+        if (!isset($_GET['id']) || !validPositiveInt($_GET['id'])) jsonResponse(400,'error','Parameter id wajib berupa bilangan bulat positif.',null);
+        $id=(int)$_GET['id']; $stmt=$conn->prepare('SELECT id FROM peminjaman WHERE id=?'); $stmt->bind_param('i',$id); $stmt->execute();
+        if (!$stmt->get_result()->fetch_assoc()) jsonResponse(404,'error','Peminjaman tidak ditemukan.',null);
+        $stmt=$conn->prepare('DELETE FROM peminjaman WHERE id=?'); $stmt->bind_param('i',$id); $stmt->execute();
+        jsonResponse(200,'success','Peminjaman berhasil dihapus',['id'=>$id]);
+    }
+    header('Allow: GET, POST, PUT, DELETE'); jsonResponse(405,'error','Method tidak diizinkan.',null);
+} catch (Throwable $e) { handleApiError($e); }
+
+function validDate($value): bool {
+    if (!is_string($value)) return false;
+    $d = DateTime::createFromFormat('!Y-m-d', $value);
+    return $d && $d->format('Y-m-d') === $value;
 }
