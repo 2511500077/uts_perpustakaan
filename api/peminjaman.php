@@ -39,4 +39,22 @@ try {
         $stmt->bind_param('iisss',$aid,$bid,$data['tanggal_pinjam'],$kembali,$status); $stmt->execute();
         jsonResponse(201,'success','Peminjaman berhasil ditambahkan',['id'=>$conn->insert_id]);
     }
-    
+    if ($method === 'PUT') {
+        if (!isset($_GET['id']) || !validPositiveInt($_GET['id'])) jsonResponse(400,'error','Parameter id wajib berupa bilangan bulat positif.',null);
+        $id=(int)$_GET['id']; $data=readJsonBody(); requireFields($data,['anggota_id','buku_id','tanggal_pinjam','status']);
+        if (!validPositiveInt($data['anggota_id']) || !validPositiveInt($data['buku_id'])) jsonResponse(400,'error','anggota_id dan buku_id harus bilangan bulat positif.',null);
+        if (!in_array($data['status'],['dipinjam','dikembalikan'],true)) jsonResponse(400,'error','status harus dipinjam atau dikembalikan.',null);
+        if (!validDate($data['tanggal_pinjam']) || (!empty($data['tanggal_kembali']) && !validDate($data['tanggal_kembali']))) jsonResponse(400,'error','Format tanggal harus YYYY-MM-DD.',null);
+        $stmt=$conn->prepare('SELECT id FROM peminjaman WHERE id=?'); $stmt->bind_param('i',$id); $stmt->execute();
+        if (!$stmt->get_result()->fetch_assoc()) jsonResponse(404,'error','Peminjaman tidak ditemukan.',null);
+        $aid=(int)$data['anggota_id']; $bid=(int)$data['buku_id'];
+        $stmt=$conn->prepare('SELECT id FROM anggota WHERE id=?'); $stmt->bind_param('i',$aid); $stmt->execute();
+        if (!$stmt->get_result()->fetch_assoc()) jsonResponse(404,'error','Anggota terkait tidak ditemukan.',null);
+        $stmt=$conn->prepare('SELECT id FROM buku WHERE id=?'); $stmt->bind_param('i',$bid); $stmt->execute();
+        if (!$stmt->get_result()->fetch_assoc()) jsonResponse(404,'error','Buku terkait tidak ditemukan.',null);
+        $kembali=empty($data['tanggal_kembali'])?null:$data['tanggal_kembali']; $status=$data['status'];
+        $stmt=$conn->prepare('UPDATE peminjaman SET anggota_id=?,buku_id=?,tanggal_pinjam=?,tanggal_kembali=?,status=? WHERE id=?');
+        $stmt->bind_param('iisssi',$aid,$bid,$data['tanggal_pinjam'],$kembali,$status,$id); $stmt->execute();
+        jsonResponse(200,'success','Peminjaman berhasil diperbarui',['id'=>$id]);
+    }
+}
