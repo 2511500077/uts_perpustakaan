@@ -7,7 +7,7 @@ function getInputValue(array $data, string $key) {
 }
 
 $method = $_SERVER['REQUEST_METHOD'];
-try {
+try { 
     $conn = db();
     if ($method === 'GET') {
         if (isset($_GET['id'])) {
