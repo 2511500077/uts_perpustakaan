@@ -29,10 +29,10 @@ Lengkapi sebelum dikumpulkan:
 =======
 >>>>>>> 2d3c7bb (nyambungin repo ke vscode)
 >>>>>>> b446c545c5af28bb491ef37556449fbf114972bb
-- Anggota 1 — NIM: ..., Nama: ..., Tugas: database/ERD
-- Anggota 2 — NIM: ..., Nama: ..., Tugas: endpoint anggota
-- Anggota 3 — NIM: ..., Nama: ..., Tugas: endpoint buku
-- Anggota 4 (jika ada) — NIM: ..., Nama: ..., Tugas: endpoint peminjaman/testing
+- Anggota 1 — NIM: 2511500076, Nama: Julio Putrawan, Tugas: database/ERD+Relasi
+- Anggota 2 — NIM: 2511500078, Nama: Ade Putra, Tugas: endpoint anggota
+- Anggota 3 — NIM: 2511500077, Nama: Afdal, Tugas: endpoint buku
+- Anggota 4 — NIM: 2511500074, Nama: Panji, Tugas: endpoint peminjaman/testing
 
 ## Struktur
 <<<<<<< HEAD
@@ -87,8 +87,8 @@ erDiagram
       date tanggal_kembali
       enum status
     }
-```
-
+'''}
+    }
 ## Cara menjalankan di Laragon
 <<<<<<< HEAD
 =======
