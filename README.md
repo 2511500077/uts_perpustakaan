@@ -97,7 +97,7 @@ erDiagram
 =======
 >>>>>>> 2d3c7bb (nyambungin repo ke vscode)
 >>>>>>> b446c545c5af28bb491ef37556449fbf114972bb
-1. Ekstrak folder `uts-perpustakaan` ke `C:\\laragon\\www\\uts-perpustakaan`.
+1. Ekstrak folder `uts_perpustakaan` ke `C:\\laragon\\www\\uts_perpustakaan`.
 2. Jalankan Laragon, aktifkan Apache dan MySQL.
 3. Buka phpMyAdmin, import `database/schema.sql`. Script membuat database `uts_perpustakaan`.
 4. Pastikan `config.php` cocok dengan kredensial MySQL lokal. Default Laragon biasanya user `root` dan password kosong.
@@ -189,7 +189,7 @@ Untuk POST dan PUT, pilih Body → JSON.
 - Export seluruh request Thunder Client sebagai collection JSON setelah menambahkan semua kasus sukses dan gagal.
 - Isi nama/NIM/tugas anggota kelompok, tautan repo GitHub publik, dan tautan rekaman Zoom.
 <<<<<<< HEAD
-- Project ini adalah starter yang disusun untuk spesifikasi tugas; verifikasi di lingkungan Laragon sebelum dikumpulkan.
+- Project ini adalah starter yang disusun untuk spesifikasi tugas;
 =======
 <<<<<<< HEAD
 - # Project ini adalah starter yang disusun untuk spesifikasi tugas; verifikasi di lingkungan Laragon sebelum dikumpulkan.
@@ -198,7 +198,7 @@ Untuk POST dan PUT, pilih Body → JSON.
 
 > > > > > > > 527147acf1fb7cf6f3218f52372c47aca8fd8c44
 =======
-- Project ini adalah starter yang disusun untuk spesifikasi tugas; verifikasi di lingkungan Laragon sebelum dikumpulkan.
+- Project ini adalah starter yang disusun untuk spesifikasi tugas;
 >>>>>>> 2d3c7bb (nyambungin repo ke vscode)
 .
 >>>>>>> b446c545c5af28bb491ef37556449fbf114972bb
